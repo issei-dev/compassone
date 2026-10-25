@@ -1,0 +1,3506 @@
+<!-- Output: html -->
+<!-- Filename: CompassONEコーポレートサイト_採用インタビューオフィス拡充版 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3eb">
+  <meta name="description" content="CompassONEの事業、働く仲間、採用情報、オフィスをご紹介します。">
+  <title>CompassONE｜つながらない、その先へ。</title>
+
+  <style>
+    :root {
+      --paper: #f5f3eb;
+      --ink: #21271f;
+      --green: #315646;
+      --lime: #dbf583;
+      --orange: #ff985e;
+      --purple: #d7c9ef;
+      --line: rgba(33, 39, 31, 0.18);
+      --muted: #61665b;
+      --radius: 26px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      color: inherit;
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    figure {
+      margin-top: 0;
+    }
+
+    figure {
+      margin-inline: 0;
+    }
+
+    ::selection {
+      color: var(--ink);
+      background: var(--lime);
+    }
+
+    :focus-visible {
+      outline: 3px solid #ad4915;
+      outline-offset: 5px;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .shell {
+      width: min(1240px, calc(100% - 80px));
+      margin-inline: auto;
+    }
+
+    .narrow {
+      width: min(800px, calc(100% - 80px));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding-block: 100px;
+    }
+
+    .soft {
+      background: #eaece2;
+    }
+
+    .eyebrow {
+      display: block;
+      margin-bottom: 19px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 45px;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-size: clamp(30px, 4vw, 54px);
+      line-height: 1.45;
+      letter-spacing: -0.05em;
+    }
+
+    .section-summary {
+      max-width: 380px;
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .small-note {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 20px;
+      z-index: 100;
+      padding: 12px 18px;
+      background: var(--lime);
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 86px;
+      padding: 16px 30px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(245, 243, 235, 0.96);
+      backdrop-filter: blur(16px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      white-space: nowrap;
+    }
+
+    .brand-symbol {
+      position: relative;
+      width: 29px;
+      height: 29px;
+      border: 2px solid currentColor;
+      border-radius: 50%;
+    }
+
+    .brand-symbol::after {
+      position: absolute;
+      top: 4px;
+      left: 10px;
+      width: 6px;
+      height: 17px;
+      background: currentColor;
+      transform: rotate(38deg);
+      clip-path: polygon(50% 0, 100% 100%, 50% 75%, 0 100%);
+      content: "";
+    }
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+
+    .navigation a {
+      padding-block: 5px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .navigation a:hover,
+    .navigation a[aria-current="page"] {
+      border-bottom-color: var(--green);
+    }
+
+    .navigation .nav-contact {
+      padding: 10px 18px;
+      color: white;
+      background: var(--ink);
+      border-radius: 40px;
+    }
+
+    .menu-toggle {
+      display: none;
+      padding: 8px 15px;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background: transparent;
+      font-size: 12px;
+    }
+
+    .hero {
+      overflow: hidden;
+      padding-top: 54px;
+    }
+
+    .hero-topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .pill {
+      padding: 6px 14px;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      font-size: 11px;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      min-height: 550px;
+      gap: 25px;
+    }
+
+    .hero h1 {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 28px;
+      font-size: clamp(48px, 6vw, 84px);
+      line-height: 1.35;
+      letter-spacing: -0.065em;
+    }
+
+    .highlight {
+      position: relative;
+      display: inline-block;
+    }
+
+    .highlight::after {
+      position: absolute;
+      right: -3px;
+      bottom: 8px;
+      left: -3px;
+      z-index: -1;
+      height: 0.23em;
+      background: var(--lime);
+      transform: rotate(-2deg);
+      content: "";
+    }
+
+    .hero-copy {
+      font-size: 15px;
+      line-height: 2.1;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 24px;
+      padding-block: 12px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .arrow {
+      display: inline-grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      transition: transform 0.25s, background 0.25s;
+    }
+
+    a:hover .arrow,
+    button:hover .arrow {
+      transform: translate(3px, -3px);
+      color: var(--ink);
+      background: var(--lime);
+    }
+
+    .hero-art {
+      position: relative;
+      height: 460px;
+    }
+
+    .orbit {
+      position: absolute;
+      inset: 30px 0;
+      border: 1px dashed rgba(49, 86, 70, 0.35);
+      border-radius: 50%;
+      transform: rotate(-25deg);
+    }
+
+    .shape {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      width: 155px;
+      height: 155px;
+      font-size: 55px;
+      animation: float 7s ease-in-out infinite;
+    }
+
+    .shape.one {
+      top: 35px;
+      left: 3%;
+      border-radius: 40px 40px 10px 40px;
+      background: var(--orange);
+      rotate: -12deg;
+    }
+
+    .shape.two {
+      top: 10px;
+      right: 0;
+      border-radius: 50%;
+      background: var(--purple);
+      animation-delay: -2s;
+    }
+
+    .shape.three {
+      right: 4%;
+      bottom: 30px;
+      border-radius: 24px;
+      background: var(--lime);
+      animation-delay: -4s;
+    }
+
+    .shape.four {
+      bottom: 35px;
+      left: 0;
+      width: 125px;
+      height: 125px;
+      border-radius: 50% 50% 15px 50%;
+      background: #dfdfd5;
+      animation-delay: -1s;
+    }
+
+    .gear-core {
+      position: absolute;
+      top: 150px;
+      left: 50%;
+      display: grid;
+      place-content: center;
+      width: 210px;
+      height: 160px;
+      border: 7px solid var(--paper);
+      border-radius: 25px;
+      color: white;
+      background: var(--green);
+      text-align: center;
+      transform: translateX(-50%) rotate(-7deg);
+    }
+
+    .gear-core strong {
+      font-size: 31px;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .gear-core small {
+      margin-top: 12px;
+      font-size: 9px;
+      letter-spacing: 0.1em;
+    }
+
+    .marquee {
+      overflow: hidden;
+      padding-block: 18px;
+      border-block: 1px solid var(--line);
+      background: var(--lime);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 35s linear infinite;
+    }
+
+    .marquee-track span {
+      padding-right: 35px;
+      font-size: clamp(26px, 4vw, 46px);
+      font-weight: 900;
+      letter-spacing: -0.05em;
+    }
+
+    .motion-toggle {
+      display: block;
+      margin: 12px 0 0 auto;
+      padding: 4px 0;
+      border: none;
+      background: none;
+      font-size: 10px;
+      text-decoration: underline;
+    }
+
+    body.motion-paused .shape,
+    body.motion-paused .marquee-track {
+      animation-play-state: paused;
+    }
+
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .long-copy {
+      font-size: 15px;
+      line-height: 2.15;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 55px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: clamp(38px, 5vw, 65px);
+      line-height: 1.4;
+      letter-spacing: -0.05em;
+    }
+
+    .stat strong small {
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .product-section {
+      margin-inline: 16px;
+      padding-block: 85px;
+      color: var(--paper);
+      background: var(--green);
+      border-radius: 38px;
+    }
+
+    .product-name {
+      margin: 25px 0;
+      font-size: clamp(45px, 6vw, 74px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+
+    .product-section .two-columns {
+      align-items: center;
+    }
+
+    .product-section .small-note {
+      color: #d3dfcf;
+    }
+
+    .diagram {
+      padding: 32px 25px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .diagram-source,
+    .diagram-targets div {
+      padding: 16px 9px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 12px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .connector {
+      width: 1px;
+      height: 35px;
+      margin: auto;
+      background: var(--lime);
+    }
+
+    .diagram-hub {
+      padding: 24px 10px;
+      color: var(--ink);
+      background: var(--lime);
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .diagram-hub strong {
+      display: block;
+      font-size: 29px;
+      letter-spacing: -0.05em;
+    }
+
+    .diagram-hub small {
+      font-size: 11px;
+    }
+
+    .diagram-targets {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .business-card {
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .business-card:hover {
+      transform: translateY(-6px);
+      background: #eeeee3;
+    }
+
+    .business-icon {
+      display: grid;
+      place-items: center;
+      width: 75px;
+      height: 75px;
+      margin-bottom: 28px;
+      background: var(--lime);
+      border-radius: 20px;
+      font-size: 28px;
+    }
+
+    .business-card:nth-child(2) .business-icon {
+      background: var(--purple);
+    }
+
+    .business-card:nth-child(3) .business-icon {
+      background: var(--orange);
+    }
+
+    .business-card h3 {
+      font-size: 21px;
+      line-height: 1.6;
+    }
+
+    .business-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /*
+      画像は同一フォルダー配下の assets/ を参照。
+      未配置時は、写真と誤認しない仮表示へ自動的に切り替える。
+      オフィス画像は採用済みマスターから生成した画像を使用する。
+      人物写真は架空社員の生成画像を配置し、実在人物の写真は使用しない。
+    */
+
+    .media {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      aspect-ratio: 16 / 10;
+      background: var(--tone, #d9dfcc);
+      border-radius: var(--radius);
+      isolation: isolate;
+    }
+
+    .media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.65s;
+    }
+
+    a:hover .media img,
+    button:hover .media img {
+      transform: scale(1.045);
+    }
+
+    .media.is-missing img {
+      display: none;
+    }
+
+    .image-fallback {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-content: center;
+      padding: 25px;
+      text-align: center;
+      background: var(--tone, #d9dfcc);
+    }
+
+    .image-fallback::before {
+      position: absolute;
+      top: 12%;
+      right: 15%;
+      bottom: 12%;
+      left: 15%;
+      z-index: -1;
+      border: 1px solid rgba(33, 39, 31, 0.2);
+      border-radius: 50%;
+      transform: rotate(-25deg) scaleX(0.8);
+      content: "";
+    }
+
+    .image-fallback strong {
+      font-size: clamp(25px, 4vw, 55px);
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+    }
+
+    .image-fallback small {
+      margin-top: 12px;
+      font-size: 11px;
+    }
+
+    .image-fallback em {
+      margin-top: 10px;
+      font-size: 9px;
+      font-style: normal;
+      opacity: 0.7;
+    }
+
+    .media figcaption,
+    .media .image-label {
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      left: 14px;
+      z-index: 2;
+      width: fit-content;
+      max-width: calc(100% - 28px);
+      padding: 5px 11px;
+      color: var(--ink);
+      background: rgba(245, 243, 235, 0.94);
+      border-radius: 20px;
+      font-size: 10px;
+    }
+
+    .portrait {
+      aspect-ratio: 4 / 5;
+      border-radius: 18px;
+    }
+
+    .portrait img {
+      object-position: center 30%;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 30px 0;
+    }
+
+    .filter-button {
+      padding: 8px 17px;
+      border: 1px solid var(--line);
+      border-radius: 35px;
+      background: transparent;
+      font-size: 12px;
+    }
+
+    .filter-button[aria-pressed="true"] {
+      color: white;
+      background: var(--ink);
+    }
+
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 35px 18px;
+    }
+
+    .member-card {
+      display: block;
+    }
+
+    .member-card .media {
+      margin-bottom: 15px;
+    }
+
+    .member-department {
+      display: block;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .member-name {
+      display: block;
+      margin: 3px 0;
+      font-size: 19px;
+      font-weight: 800;
+    }
+
+    .member-role {
+      display: block;
+      font-size: 10px;
+    }
+
+    .member-more {
+      display: inline-block;
+      margin-top: 10px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid var(--line);
+      font-size: 10px;
+    }
+
+    .banner-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .feature-link {
+      display: block;
+    }
+
+    .feature-link h3 {
+      margin: 22px 0 8px;
+      font-size: 25px;
+    }
+
+    .feature-link p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .company-table {
+      margin: 0;
+    }
+
+    .company-row {
+      display: grid;
+      grid-template-columns: 125px 1fr;
+      gap: 18px;
+      padding: 21px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 13px;
+    }
+
+    .company-row:first-child {
+      border-top: 1px solid var(--line);
+    }
+
+    .company-row dt {
+      font-weight: 800;
+    }
+
+    .company-row dd {
+      margin: 0;
+    }
+
+    .page-head {
+      padding: 55px 0 65px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 38px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .page-head h1 {
+      margin-bottom: 24px;
+      font-size: clamp(42px, 6.8vw, 86px);
+      line-height: 1.3;
+      letter-spacing: -0.065em;
+    }
+
+    .page-head p {
+      max-width: 650px;
+      font-size: 15px;
+      line-height: 2;
+    }
+
+    .full-visual {
+      width: min(1440px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .full-visual .media {
+      aspect-ratio: 21 / 9;
+    }
+
+    .photo-collage {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 18px;
+    }
+
+    .photo-collage .media:first-child {
+      grid-row: span 2;
+      height: 100%;
+      min-height: 430px;
+    }
+
+    .photo-collage .media:not(:first-child) {
+      aspect-ratio: 16 / 8;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .value-card {
+      padding: 30px;
+      border-radius: var(--radius);
+      background: #ece7d8;
+    }
+
+    .value-card:nth-child(2) {
+      background: var(--purple);
+    }
+
+    .value-card:nth-child(3) {
+      background: var(--lime);
+    }
+
+    .value-card strong {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 38px;
+      line-height: 1;
+    }
+
+    .value-card h3 {
+      font-size: 22px;
+    }
+
+    .value-card p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 45px;
+    }
+
+    .work-item {
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .work-item h3 {
+      margin-bottom: 9px;
+      font-size: 20px;
+    }
+
+    .work-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .jobs {
+      border-top: 1px solid var(--line);
+    }
+
+    .job {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .job summary {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 26px 5px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .job summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .job summary::after {
+      font-size: 26px;
+      content: "＋";
+    }
+
+    .job[open] summary::after {
+      content: "−";
+    }
+
+    .job summary strong {
+      display: block;
+      font-size: 21px;
+    }
+
+    .job summary small {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .job-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      padding: 5px 5px 30px;
+      font-size: 13px;
+    }
+
+    .job-body h4 {
+      margin: 15px 0 8px;
+    }
+
+    .job-body ul {
+      padding-left: 20px;
+    }
+
+    .job-note {
+      grid-column: 1 / -1;
+      padding: 16px;
+      background: #e9ebdf;
+      border-radius: 12px;
+      font-size: 11px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .steps li {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+    }
+
+    .steps span {
+      color: var(--green);
+      font-size: 12px;
+    }
+
+    .steps h3 {
+      margin: 12px 0 10px;
+      font-size: 18px;
+    }
+
+    .steps p {
+      margin: 0;
+      font-size: 12px;
+    }
+
+    .faq {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq summary {
+      padding: 23px 0;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .faq p {
+      padding: 0 0 20px 20px;
+      font-size: 13px;
+    }
+
+    .interview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 45px 25px;
+    }
+
+    .interview-card .media {
+      margin-bottom: 20px;
+    }
+
+    .interview-card h2 {
+      margin-bottom: 15px;
+      font-size: 23px;
+      line-height: 1.6;
+    }
+
+    .interview-meta {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .interview-hero {
+      display: grid;
+      grid-template-columns: 1fr 0.8fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .interview-hero h1 {
+      font-size: clamp(36px, 4.7vw, 62px);
+    }
+
+    .interview-hero .media {
+      aspect-ratio: 4 / 4.7;
+    }
+
+    .interview-person {
+      margin: 28px 0;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+
+    .interview-person strong {
+      display: block;
+      margin-top: 5px;
+      font-size: 24px;
+    }
+
+    .interview-person span {
+      font-size: 12px;
+    }
+
+    .interview-intro {
+      padding: 35px;
+      border-radius: var(--radius);
+      background: #eaece2;
+      font-size: 15px;
+      line-height: 2;
+    }
+
+    .qa-block {
+      margin-block: 60px;
+    }
+
+    .qa-block .eyebrow {
+      color: var(--green);
+    }
+
+    .qa-block h2 {
+      margin-bottom: 25px;
+      font-size: clamp(25px, 3vw, 35px);
+    }
+
+    .qa-block p {
+      font-size: 15px;
+      line-height: 2.15;
+      white-space: pre-line;
+    }
+
+    .interview-photo {
+      margin: 50px 0;
+    }
+
+    .interview-photo figcaption {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .schedule {
+      margin: 55px 0;
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .schedule h2 {
+      margin-bottom: 22px;
+      font-size: 27px;
+    }
+
+    .schedule-row {
+      display: grid;
+      grid-template-columns: 75px 1fr;
+      gap: 15px;
+      padding: 15px 0;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+    }
+
+    .schedule-row strong {
+      color: var(--green);
+    }
+
+    .office-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 45px 26px;
+    }
+
+    .office-card:first-child {
+      grid-column: 1 / -1;
+    }
+
+    .office-card:first-child .media {
+      aspect-ratio: 21 / 9;
+    }
+
+    .photo-button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: none;
+      background: none;
+      text-align: left;
+    }
+
+    .office-caption {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 20px;
+    }
+
+    .office-caption h3 {
+      margin-bottom: 5px;
+      font-size: 22px;
+    }
+
+    .office-caption p {
+      max-width: 500px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .office-number {
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .office-concept {
+      padding: 36px;
+      border-radius: var(--radius);
+      background: var(--lime);
+    }
+
+    .office-concept h3 {
+      font-size: 25px;
+    }
+
+    .office-concept p {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
+    .cta {
+      padding-block: 80px;
+      background: var(--lime);
+    }
+
+    .cta-layout {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+    }
+
+    .cta h2 {
+      margin-bottom: 20px;
+      font-size: clamp(34px, 5vw, 65px);
+    }
+
+    .cta p {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
+    .round-link {
+      display: grid;
+      flex-shrink: 0;
+      place-content: center;
+      width: 170px;
+      height: 170px;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 800;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .round-link:hover {
+      transform: rotate(-6deg);
+      background: white;
+    }
+
+    .round-link span {
+      font-size: 30px;
+    }
+
+    .contact-band {
+      padding: 65px 0;
+      color: white;
+      background: var(--green);
+    }
+
+    .contact-band h2 {
+      margin-bottom: 12px;
+      font-size: clamp(28px, 3.5vw, 43px);
+    }
+
+    .contact-band p {
+      margin-bottom: 0;
+      color: #d6dfd2;
+      font-size: 13px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      padding: 14px 24px;
+      border: 1px solid currentColor;
+      border-radius: 45px;
+      color: inherit;
+      background: transparent;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .site-footer {
+      padding: 45px 0 25px;
+    }
+
+    .footer-top,
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .footer-top {
+      margin-bottom: 32px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 12px;
+    }
+
+    .footer-notice {
+      max-width: 900px;
+      margin-bottom: 25px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .footer-bottom {
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .link-button {
+      padding: 0;
+      border: none;
+      background: none;
+      font-size: inherit;
+      text-decoration: underline;
+    }
+
+    .asset-guide {
+      margin-top: 25px;
+      padding: 16px 20px;
+      border: 1px dashed var(--line);
+      border-radius: 14px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .asset-guide summary {
+      cursor: pointer;
+    }
+
+    .asset-guide code {
+      overflow-wrap: anywhere;
+    }
+
+    .asset-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px 25px;
+      padding-left: 18px;
+    }
+
+    dialog {
+      width: min(620px, calc(100% - 32px));
+      max-height: 90dvh;
+      padding: 45px;
+      border: none;
+      border-radius: 24px;
+      background: var(--paper);
+      color: var(--ink);
+      overflow-y: auto;
+    }
+
+    dialog::backdrop {
+      background: rgba(20, 30, 22, 0.7);
+      backdrop-filter: blur(7px);
+    }
+
+    .dialog-close {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      z-index: 5;
+      display: grid;
+      place-items: center;
+      width: 35px;
+      height: 35px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: var(--paper);
+      font-size: 22px;
+    }
+
+    dialog h2 {
+      margin-bottom: 24px;
+      font-size: 29px;
+    }
+
+    .dialog-copy {
+      font-size: 14px;
+      white-space: pre-line;
+    }
+
+    .lightbox {
+      width: min(1100px, calc(100% - 32px));
+      padding: 45px 25px 25px;
+    }
+
+    .lightbox .media {
+      max-height: 65dvh;
+      aspect-ratio: 16 / 10;
+      border-radius: 15px;
+    }
+
+    .lightbox .media img {
+      object-fit: contain;
+      background: #e8e6df;
+    }
+
+    .lightbox h2 {
+      margin: 20px 0 6px;
+      font-size: 22px;
+    }
+
+    .lightbox p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 17px;
+    }
+
+    .contact-form label {
+      display: grid;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: white;
+      font-size: 14px;
+    }
+
+    .form-submit {
+      padding: 13px;
+      border: none;
+      border-radius: 12px;
+      color: white;
+      background: var(--green);
+    }
+
+    .form-status {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .reveal {
+      transition: opacity 0.65s, transform 0.65s;
+    }
+
+    .reveal.pending {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+
+    @keyframes float {
+      0%, 100% {
+        translate: 0 0;
+      }
+      50% {
+        translate: 0 -13px;
+      }
+    }
+
+    @keyframes marquee {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .navigation {
+        gap: 15px;
+        font-size: 10px;
+      }
+
+      .people-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .two-columns,
+      .interview-hero {
+        gap: 40px;
+      }
+
+      .shape {
+        width: 135px;
+        height: 135px;
+      }
+    }
+
+    @media (max-width: 850px) {
+      .shell,
+      .narrow {
+        width: calc(100% - 40px);
+      }
+
+      .site-header {
+        min-height: 76px;
+        flex-wrap: wrap;
+        padding-inline: 20px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .navigation {
+        display: none;
+        width: 100%;
+        padding: 25px 0 10px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        font-size: 12px;
+      }
+
+      .navigation.is-open {
+        display: flex;
+      }
+
+      .navigation .nav-contact {
+        text-align: center;
+      }
+
+      .hero-layout,
+      .two-columns,
+      .interview-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-layout {
+        padding-top: 35px;
+      }
+
+      .hero-art {
+        width: min(450px, 100%);
+        height: 410px;
+        margin-inline: auto;
+      }
+
+      .gear-core {
+        top: 130px;
+      }
+
+      .hero h1 {
+        font-size: clamp(49px, 9vw, 74px);
+      }
+
+      .section {
+        padding-block: 70px;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .card-grid,
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .business-card {
+        padding: 28px;
+      }
+
+      .interview-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .interview-hero .media {
+        max-width: 500px;
+        width: 100%;
+        margin-inline: auto;
+      }
+
+      .cta-layout {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .round-link {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: auto;
+        height: auto;
+        padding: 12px 25px;
+        border-radius: 45px;
+      }
+
+      .footer-top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero-topline {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .hero-topline .eyebrow {
+        font-size: 9px;
+      }
+
+      .hero {
+        padding-top: 30px;
+      }
+
+      .hero-copy {
+        font-size: 13px;
+      }
+
+      .shape {
+        width: 120px;
+        height: 120px;
+      }
+
+      .hero-art {
+        height: 355px;
+      }
+
+      .gear-core {
+        top: 110px;
+        width: 180px;
+        height: 140px;
+      }
+
+      .gear-core strong {
+        font-size: 27px;
+      }
+
+      .shape.four {
+        width: 100px;
+        height: 100px;
+      }
+
+      .people-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 14px;
+      }
+
+      .member-name {
+        font-size: 18px;
+      }
+
+      .member-role {
+        font-size: 9px;
+      }
+
+      .banner-grid,
+      .work-grid,
+      .job-body,
+      .interview-grid,
+      .office-grid,
+      .photo-collage {
+        grid-template-columns: 1fr;
+      }
+
+      .office-card:first-child {
+        grid-column: auto;
+      }
+
+      .office-card:first-child .media,
+      .full-visual .media {
+        aspect-ratio: 4 / 3;
+      }
+
+      .photo-collage .media:first-child {
+        grid-row: auto;
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+      }
+
+      .photo-collage .media:not(:first-child) {
+        aspect-ratio: 16 / 10;
+      }
+
+      .stats {
+        gap: 12px;
+      }
+
+      .stat strong {
+        font-size: 36px;
+      }
+
+      .stat span {
+        font-size: 10px;
+      }
+
+      .product-section {
+        margin-inline: 8px;
+        padding-block: 55px;
+      }
+
+      .company-row {
+        grid-template-columns: 82px 1fr;
+        font-size: 12px;
+      }
+
+      .page-head {
+        padding: 35px 0 45px;
+      }
+
+      .page-head h1 {
+        font-size: 42px;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .interview-intro,
+      .schedule {
+        padding: 25px;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .asset-list {
+        grid-template-columns: 1fr;
+      }
+
+      dialog {
+        padding: 45px 23px 25px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .reveal.pending {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#home/main">本文へ移動</a>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="CompassONE トップ">
+      <span class="brand-symbol" aria-hidden="true"></span>
+      <span>CompassONE</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">
+      MENU ＋
+    </button>
+
+    <nav class="navigation" id="navigation" aria-label="メインナビゲーション">
+      <a href="#home/about">ABOUT</a>
+      <a href="#home/product">PRODUCT</a>
+      <a href="#home/people">PEOPLE</a>
+      <a href="#interviews" data-nav-page="interviews">INTERVIEW</a>
+      <a href="#office" data-nav-page="office">OFFICE</a>
+      <a href="#recruit" data-nav-page="recruit">RECRUIT</a>
+      <a class="nav-contact" href="#home/contact">CONTACT ↗</a>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- HOME -->
+    <div class="page" id="page-home" data-page="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="shell">
+          <div class="hero-topline">
+            <span class="eyebrow">A new chapter, the same curiosity.</span>
+            <span class="pill">2026.10 NODELEAF → CompassONE</span>
+          </div>
+
+          <div class="hero-layout">
+            <div>
+              <h1 id="hero-title">
+                つながらない、<br>
+                <span class="highlight">その先へ。</span>
+              </h1>
+              <p class="hero-copy">
+                新しいAIも、使い慣れたシステムも。<br>
+                現場の「こうしたい」に、ちゃんとつなげよう。<br>
+                私たちは、技術のあいだにある壁を越える会社です。
+              </p>
+              <a class="text-link" href="#home/about">
+                CompassONEについて
+                <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <div class="hero-art" role="img" aria-label="異なる仕組みをCompass Gearがつなぐイメージ">
+              <div class="orbit"></div>
+              <div class="shape one" aria-hidden="true">↗</div>
+              <div class="shape two" aria-hidden="true">✳</div>
+              <div class="shape three" aria-hidden="true">＋</div>
+              <div class="shape four" aria-hidden="true">⌘</div>
+              <div class="gear-core">
+                <strong>Compass<br>Gear</strong>
+                <small>CONNECT THE POSSIBILITIES</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span>CONNECT THE POSSIBILITIES. ↗ MAKE WORK BETTER. ✳</span>
+            <span>CONNECT THE POSSIBILITIES. ↗ MAKE WORK BETTER. ✳</span>
+          </div>
+        </div>
+
+        <div class="shell">
+          <button class="motion-toggle" type="button" aria-pressed="false">
+            自動アニメーションを停止
+          </button>
+        </div>
+      </section>
+
+      <section class="section shell" id="about">
+        <div class="two-columns">
+          <div class="reveal">
+            <span class="eyebrow">01 / About us</span>
+            <h2>社名は変わった。<br>現場を見る目は、<br>変わらない。</h2>
+          </div>
+          <div class="long-copy reveal">
+            <p>「この作業、もう少し楽にならない？」<br>私たちの仕事は、そんな一言から始まります。</p>
+            <p>
+              ノードリーフとして積み重ねてきた、システム開発とクラウド運用。
+              新しい仲間と製品づくりの力を加え、
+              2026年10月、CompassONEとして再スタートしました。
+            </p>
+            <p>
+              新しい技術に、現場を合わせるのではなく。<br>
+              現場の可能性を、新しい技術で広げていく。<br>
+              そのために、つなぎます。
+            </p>
+          </div>
+        </div>
+
+        <div class="stats reveal">
+          <div class="stat">
+            <strong>2016<small>年</small></strong>
+            <span>ノードリーフとして設立</span>
+          </div>
+          <div class="stat">
+            <strong>93<small>名</small></strong>
+            <span>従業員88名・役員5名</span>
+          </div>
+          <div class="stat">
+            <strong>＋10<small>名</small></strong>
+            <span>新体制をつくる仲間</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-section" id="product">
+        <div class="shell two-columns">
+          <div class="reveal">
+            <span class="eyebrow">02 / Our product</span>
+            <h2>AIの可能性を、<br>接続先で終わらせない。</h2>
+            <div class="product-name">Compass Gear</div>
+            <p class="long-copy">
+              MCPに未対応の業務ソフト。社内だけで動くシステム。
+              連携方法が異なるサービスや機器。
+              利用できる接続手段を組み合わせて、AIと現場の仕事をつなぐ連携ハブです。
+            </p>
+            <a class="text-link" href="#home/contact">
+              つなぎたいものを相談する
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+            <p class="small-note">
+              接続可否は対象の仕様・権限・契約条件によって異なります。
+              すべてのソフトウェアや機器への接続を保証するものではありません。
+            </p>
+          </div>
+
+          <div class="diagram reveal">
+            <div class="diagram-source">AIアプリケーション / MCPクライアント</div>
+            <div class="connector" aria-hidden="true"></div>
+            <div class="diagram-hub">
+              <strong>Compass Gear</strong>
+              <small>認証・権限・承認・実行履歴</small>
+            </div>
+            <div class="connector" aria-hidden="true"></div>
+            <div class="diagram-targets">
+              <div>業務ソフト<br>API / SDK</div>
+              <div>サービス<br>データ連携</div>
+              <div>機器<br>ゲートウェイ</div>
+            </div>
+            <p class="small-note">接続構成の概念図です。対応機能・提供条件は個別に確認します。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">03 / Business</span>
+            <h2>つくる。支える。<br>その先まで、つなぐ。</h2>
+          </div>
+          <p class="section-summary">製品だけでも、個別開発だけでもない。現場ごとの答えを、一緒に組み立てます。</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="business-card reveal">
+            <span class="business-icon" aria-hidden="true">〈/〉</span>
+            <h3>業務システム・<br>Webサービス開発</h3>
+            <p>販売管理から新規Webサービスまで。業務整理、設計、開発、継続改善を一つの流れで支援します。</p>
+          </article>
+          <article class="business-card reveal">
+            <span class="business-icon" aria-hidden="true">↥</span>
+            <h3>クラウド構築・<br>運用支援</h3>
+            <p>移行して終わりではなく、使い続けられる基盤へ。監視、バックアップ、権限、コストまで見渡します。</p>
+          </article>
+          <article class="business-card reveal">
+            <span class="business-icon" aria-hidden="true">＋</span>
+            <h3>自社製品・<br>業務連携</h3>
+            <p>Compass Gearと申請・承認SaaS「LeafFlow」。現場で見つけた課題を、繰り返し役立つ製品へ育てます。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section soft" id="people">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <div>
+              <span class="eyebrow">04 / People</span>
+              <h2>会社の中身は、<br>やっぱり、人だ。</h2>
+            </div>
+            <p class="section-summary">
+              ノードリーフから、ともに歩んできた10人。
+              得意なことも視点も違うから、できることが増えていく。
+            </p>
+          </div>
+
+          <div class="filters" role="group" aria-label="社員の所属で絞り込む">
+            <button class="filter-button" type="button" data-filter="all" aria-pressed="true">すべて</button>
+            <button class="filter-button" type="button" data-filter="development" aria-pressed="false">開発</button>
+            <button class="filter-button" type="button" data-filter="cloud" aria-pressed="false">クラウド</button>
+            <button class="filter-button" type="button" data-filter="product" aria-pressed="false">プロダクト</button>
+            <button class="filter-button" type="button" data-filter="sales" aria-pressed="false">営業・CS</button>
+            <button class="filter-button" type="button" data-filter="corporate" aria-pressed="false">コーポレート</button>
+          </div>
+
+          <p class="eyebrow" id="member-count" aria-live="polite">MEMBERS / 10</p>
+          <div class="people-grid" id="people-grid"></div>
+
+          <a class="text-link" href="#interviews">
+            10人のインタビューを読む
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section shell">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">05 / Life at CompassONE</span>
+            <h2>ここで働く一日を、<br>少しだけ。</h2>
+          </div>
+        </div>
+        <div class="banner-grid">
+          <a class="feature-link reveal" href="#office">
+            <div data-photo="office-workspace" data-label="メイン執務エリア"></div>
+            <h3>場所から知る、私たち。 ↗</h3>
+            <p>集中する席、相談するテーブル。オフィスの中を巡ってみてください。</p>
+          </a>
+          <a class="feature-link reveal" href="#recruit">
+            <div data-photo="office-collaboration" data-label="共同作業スペース"></div>
+            <h3>次の章を、一緒につくる。 ↗</h3>
+            <p>働き方、大切にすること、想定する役割。採用についてご紹介します。</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="section shell" id="company">
+        <div class="two-columns">
+          <div class="reveal">
+            <span class="eyebrow">06 / Company</span>
+            <h2>新しい名前で。<br>同じ誠実さで。</h2>
+            <p class="small-note">法人名：株式会社CompassOne<br>ブランド表記：CompassONE</p>
+          </div>
+
+          <dl class="company-table reveal">
+            <div class="company-row">
+              <dt>会社名</dt>
+              <dd>株式会社CompassOne<br>CompassOne Inc.</dd>
+            </div>
+            <div class="company-row">
+              <dt>代表取締役</dt>
+              <dd>西村 直樹</dd>
+            </div>
+            <div class="company-row">
+              <dt>設立</dt>
+              <dd>2016年6月<br>2026年10月 ノードリーフから商号変更</dd>
+            </div>
+            <div class="company-row">
+              <dt>資本金</dt>
+              <dd>3,000万円</dd>
+            </div>
+            <div class="company-row">
+              <dt>役職員数</dt>
+              <dd>93名（従業員88名・役員5名）</dd>
+            </div>
+            <div class="company-row">
+              <dt>所在地</dt>
+              <dd>〒108-0023<br>東京都港区芝浦3-19-29<br>TEPPEN ビルディング 3F</dd>
+            </div>
+            <div class="company-row">
+              <dt>事業内容</dt>
+              <dd>業務システム・Webサービス開発<br>クラウド構築・運用<br>自社ソフトウェア・SaaS開発</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="shell cta-layout reveal">
+          <div>
+            <span class="eyebrow">Join our next chapter</span>
+            <h2>完成していない。<br>だから、面白くできる。</h2>
+            <p>「この会社、ちょっと混ざりたい。」その気持ちから。</p>
+          </div>
+          <a class="round-link" href="#recruit">採用ページへ<span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </div>
+
+    <!-- RECRUIT -->
+    <div class="page" id="page-recruit" data-page="recruit" hidden>
+      <header class="page-head shell">
+        <nav class="breadcrumb" aria-label="パンくず">
+          <a href="#home">HOME</a>
+          <span aria-hidden="true">/</span>
+          <span>RECRUIT</span>
+        </nav>
+        <span class="eyebrow">Recruit / Make our next chapter</span>
+        <h1>会社の「これから」に、<br>あなたの得意を。</h1>
+        <p>
+          できあがった仕組みに、ただ収まるのではなく。<br>
+          もっとよくする側に回りたい人へ。<br>
+          私たちは、仕事も組織も、一緒に育てる仲間を大切にします。
+        </p>
+      </header>
+
+      <div class="full-visual">
+        <div data-photo="office-workspace" data-label="働く場所を、仕事に合わせて選ぶ。"></div>
+      </div>
+
+      <section class="section shell">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">Why CompassONE?</span>
+            <h2>技術の前に、<br>仕事を見よう。</h2>
+          </div>
+          <p class="section-summary">
+            開発も、運用も、デザインも、広報も。<br>
+            誰の何をよくするのか。その問いから始めます。
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <article class="value-card reveal">
+            <strong>01 ↗</strong>
+            <h3>現場の声が、<br>仕様になる。</h3>
+            <p>要望をそのまま実装する前に、背景を聞く。必要なら、違う方法を提案する。そんな対話を大切にします。</p>
+          </article>
+          <article class="value-card reveal">
+            <strong>02 ✳</strong>
+            <h3>つくったあとも、<br>仕事は続く。</h3>
+            <p>リリース後に何が変わったか。運用で困ることはないか。使われ続ける仕組みまで考えます。</p>
+          </article>
+          <article class="value-card reveal">
+            <strong>03 ＋</strong>
+            <h3>専門性は、<br>掛け合わせる。</h3>
+            <p>開発、クラウド、プロダクト、顧客支援。一人で完結させるより、違う視点を持ち寄る組織へ。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section soft">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">How we work</span>
+              <h2>働き方にも、<br>ちゃんと理由を。</h2>
+            </div>
+          </div>
+
+          <div class="photo-collage">
+            <div data-photo="office-collaboration" data-label="議論を深める共同作業スペース"></div>
+            <div data-photo="office-booth" data-label="オンライン会議に集中する個室"></div>
+            <div data-photo="office-pantry" data-label="少し息をつくパントリー"></div>
+          </div>
+
+          <div class="work-grid">
+            <article class="work-item">
+              <h3>出社とリモートを組み合わせる</h3>
+              <p>週2日程度の出社を基本に、職務や顧客要件に合わせて調整。専属広報などは役割に応じて別途相談します。</p>
+            </article>
+            <article class="work-item">
+              <h3>フレックスタイム</h3>
+              <p>コアタイムは11時〜15時。業務上の連携を保ちながら、時間の使い方を調整します。</p>
+            </article>
+            <article class="work-item">
+              <h3>学びを持ち帰れる環境</h3>
+              <p>書籍購入、資格受験、外部研修を社内規定に基づき支援。勉強会や案件の振り返りで知見を共有します。</p>
+            </article>
+            <article class="work-item">
+              <h3>結果だけでなく、貢献も見る</h3>
+              <p>成果に加え、品質向上、知識共有、チームへの貢献を評価する方針です。詳細は職種ごとに確認します。</p>
+            </article>
+          </div>
+          <p class="small-note">制度は創作上の会社設定です。実際の雇用条件を示すものではありません。</p>
+        </div>
+      </section>
+
+      <section class="section shell">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">People & stories</span>
+            <h2>会社の説明より、<br>働く人の話を。</h2>
+          </div>
+          <a class="text-link" href="#interviews">
+            全10名のインタビュー
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="interview-grid" id="recruit-interviews"></div>
+      </section>
+
+      <section class="section soft" id="positions">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Positions / Concept</span>
+              <h2>力を発揮できる場所。</h2>
+            </div>
+            <p class="section-summary">
+              採用ページの構成例として、6つの役割をご紹介します。
+              現在、実際の求人受付は行っていません。
+            </p>
+          </div>
+          <div class="jobs" id="jobs"></div>
+        </div>
+      </section>
+
+      <section class="section shell">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Selection flow / Planned</span>
+            <h2>見極め合う、ではなく。<br>理解し合う時間に。</h2>
+          </div>
+        </div>
+
+        <ol class="steps">
+          <li>
+            <span>STEP 01</span>
+            <h3>相互理解</h3>
+            <p>これまでの経験と、次にやってみたいことを伺います。</p>
+          </li>
+          <li>
+            <span>STEP 02</span>
+            <h3>現場との対話</h3>
+            <p>仕事内容、期待する役割、チームの進め方を具体的に話します。</p>
+          </li>
+          <li>
+            <span>STEP 03</span>
+            <h3>役割のすり合わせ</h3>
+            <p>必要に応じて短い課題や制作物の説明をお願いする想定です。</p>
+          </li>
+          <li>
+            <span>STEP 04</span>
+            <h3>条件の確認</h3>
+            <p>働き方と雇用条件を確認し、納得できる選択につなげます。</p>
+          </li>
+        </ol>
+        <p class="small-note">選考フロー案です。実際の募集では職種ごとに明示します。</p>
+      </section>
+
+      <section class="section shell">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Questions</span>
+            <h2>先に、聞いておきたいこと。</h2>
+          </div>
+        </div>
+
+        <details class="faq">
+          <summary>フルリモート勤務はできますか？</summary>
+          <p>ハイブリッド勤務を基本としています。出社頻度は担当職務や顧客要件によって異なり、フルリモートを一律に保証する設定ではありません。</p>
+        </details>
+        <details class="faq">
+          <summary>自社製品だけを担当する会社ですか？</summary>
+          <p>受託開発、クラウド構築・運用、自社製品開発を並行しています。担当業務は経験、志向、事業状況を踏まえて相談する方針です。</p>
+        </details>
+        <details class="faq">
+          <summary>社員紹介やSNSへの顔出しは必須ですか？</summary>
+          <p>必須にはしない方針です。取材・撮影・公開の可否を本人に確認し、顔を出さない紹介方法も検討します。</p>
+        </details>
+        <details class="faq">
+          <summary>このページから応募できますか？</summary>
+          <p>本サイトは架空企業のコンセプトサイトのため、応募は受け付けていません。正式公開時には募集条件、採用窓口、応募者情報の取り扱いを整備します。</p>
+        </details>
+      </section>
+
+      <section class="cta">
+        <div class="shell cta-layout">
+          <div>
+            <span class="eyebrow">Explore our workplace</span>
+            <h2>働く場所も、<br>見ていきませんか。</h2>
+            <p>受付から執務エリアまで。写真で巡るCompassONE。</p>
+          </div>
+          <a class="round-link" href="#office">オフィスを見る<span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </div>
+
+    <!-- INTERVIEW INDEX -->
+    <div class="page" id="page-interviews" data-page="interviews" hidden>
+      <header class="page-head shell">
+        <nav class="breadcrumb" aria-label="パンくず">
+          <a href="#home">HOME</a>
+          <span aria-hidden="true">/</span>
+          <span>INTERVIEW</span>
+        </nav>
+        <span class="eyebrow">People & stories / 10 members</span>
+        <h1>一人ひとりの、<br>仕事の向き合い方。</h1>
+        <p>
+          肩書きの先にある、判断や工夫。<br>
+          ノードリーフから続く仲間たちが、仕事と会社づくりについて話します。
+        </p>
+        <p class="small-note">
+          掲載インタビューは人物設定に基づく創作です。実際に実施した取材ではありません。
+        </p>
+      </header>
+
+      <section class="shell section" style="padding-top: 0;" aria-label="社員インタビュー一覧">
+        <div class="interview-grid" id="interview-index"></div>
+      </section>
+    </div>
+
+    <!-- INTERVIEW DETAIL -->
+    <div class="page" id="page-interview" data-page="interview" hidden>
+      <div id="interview-content"></div>
+    </div>
+
+    <!-- OFFICE -->
+    <div class="page" id="page-office" data-page="office" hidden>
+      <header class="page-head shell">
+        <nav class="breadcrumb" aria-label="パンくず">
+          <a href="#home">HOME</a>
+          <span aria-hidden="true">/</span>
+          <span>OFFICE</span>
+        </nav>
+        <span class="eyebrow">Office tour / Shibaura, Tokyo</span>
+        <h1>集中する。話す。<br>ちょっと、ひと息。</h1>
+        <p>
+          同じ場所に集まるから、できること。<br>
+          一人になるから、進むこと。<br>
+          仕事のリズムに合わせて使い分ける、私たちのオフィスです。
+        </p>
+      </header>
+
+      <div class="full-visual">
+        <div data-photo="office-reception" data-label="CompassONE オフィスエントランス"></div>
+      </div>
+
+      <section class="section shell">
+        <div class="two-columns">
+          <div class="reveal">
+            <span class="eyebrow">Our workplace concept</span>
+            <h2>席より先に、<br>仕事のことを考えた。</h2>
+          </div>
+          <div class="long-copy reveal">
+            <p>
+              オークの木目、落ち着いたグレー、自然光。
+              見た目の統一だけでなく、集中と会話が両立することを大切にしています。
+            </p>
+            <p>
+              フリーアドレス、Web会議用個室、共同作業スペース。
+              その日の仕事に合わせて、使う場所を選ぶ設計です。
+            </p>
+            <p class="small-note">
+              オフィス画像は、採用済みの架空オフィス設定に基づくイメージです。
+              93名体制への移行に伴う座席・役員席の運用は別途検討する前提です。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell" aria-label="オフィス写真ギャラリー">
+        <div class="filters" role="group" aria-label="オフィスの用途で絞り込む">
+          <button class="filter-button" type="button" data-office-filter="all" aria-pressed="true">すべて</button>
+          <button class="filter-button" type="button" data-office-filter="work" aria-pressed="false">働く</button>
+          <button class="filter-button" type="button" data-office-filter="meeting" aria-pressed="false">話す</button>
+          <button class="filter-button" type="button" data-office-filter="relax" aria-pressed="false">ひと息・共用</button>
+          <button class="filter-button" type="button" data-office-filter="management" aria-pressed="false">経営・設備</button>
+        </div>
+        <p class="eyebrow" id="office-count" aria-live="polite">SPACES / 12</p>
+        <div class="office-grid" id="office-grid"></div>
+      </section>
+
+      <section class="section shell">
+        <div class="two-columns">
+          <div class="office-concept">
+            <span class="eyebrow">A place for conversations</span>
+            <h3>偶然の相談が、<br>次のアイデアになる。</h3>
+            <p>
+              オフィスは、全員を同じ席に集めるためだけの場所ではありません。
+              一緒に考えたほうが早いことを、気軽に話せる場所にしたいと考えています。
+            </p>
+          </div>
+          <div>
+            <span class="eyebrow">Location</span>
+            <h2>東京都港区・芝浦</h2>
+            <p class="long-copy" style="margin-top: 25px;">
+              〒108-0023<br>
+              東京都港区芝浦3-19-29<br>
+              TEPPEN ビルディング 3F
+            </p>
+            <p class="small-note">創作設定上の所在地です。実際の入居や来訪受付を示すものではありません。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="shell cta-layout">
+          <div>
+            <span class="eyebrow">Meet our people</span>
+            <h2>この場所を使う、<br>人の話も。</h2>
+            <p>仕事への向き合い方を、10人のストーリーから。</p>
+          </div>
+          <a class="round-link" href="#interviews">社員を知る<span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <section class="contact-band" id="contact">
+    <div class="shell cta-layout">
+      <div>
+        <h2>「これ、つながる？」からどうぞ。</h2>
+        <p>開発のご相談も、製品についても。まだ整理できていない課題から。</p>
+      </div>
+      <button class="button" type="button" id="open-contact">お問い合わせ ↗</button>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-top">
+        <a class="brand" href="#home" aria-label="CompassONE トップ">
+          <span class="brand-symbol" aria-hidden="true"></span>
+          <span>CompassONE</span>
+        </a>
+        <nav class="footer-links" aria-label="フッターナビゲーション">
+          <a href="#home/people">社員紹介</a>
+          <a href="#interviews">インタビュー</a>
+          <a href="#office">オフィス</a>
+          <a href="#recruit">採用情報</a>
+        </nav>
+      </div>
+
+      <p class="footer-notice">
+        架空企業のコンセプトサイトです。人物、インタビュー、事業、製品、採用情報は創作です。
+        実際の入居、求人募集、製品販売を示すものではありません。
+        写真枠は画像ファイルを配置すると表示され、未配置時は明示した仮表示になります。
+      </p>
+
+      <div class="footer-bottom">
+        <span>© 2026 CompassOne Inc. — Fictional concept website.</span>
+        <button class="link-button" type="button" id="privacy-button">データの取り扱い</button>
+        <a href="#home">BACK TO HOME ↑</a>
+      </div>
+
+      <details class="asset-guide">
+        <summary>制作プレビュー：画像の配置方法・必要ファイル</summary>
+        <p>
+          このHTMLと同じ場所に <code>assets</code> フォルダーを作成し、
+          下記の画像を配置してください。画像データ自体はこのHTMLに含まれていません。
+          公開用サーバーでも同じ相対パスを維持してください。
+        </p>
+        <p>
+          オフィス写真は全体マスター「IMG_7249.png」を毎回参照し、
+          隣接エリアの確定画像も添付して生成した写真を使用します。
+          オフィス写真には人物を入れず、社員写真は別途、架空人物として生成してください。
+          新たに紹介する成瀬梓・須藤花音は、ともに女性の設定です。
+        </p>
+        <p>
+          人物写真は縦4:5、オフィス写真は横3:2・長辺2400px以上を推奨。
+          人物写真は一覧とインタビューで同じファイルを使用し、同一人物を維持します。
+        </p>
+        <ul class="asset-list" id="asset-list"></ul>
+      </details>
+    </div>
+  </footer>
+
+  <dialog id="info-dialog" aria-labelledby="info-title">
+    <button class="dialog-close" type="button" aria-label="閉じる">×</button>
+    <span class="eyebrow">INFORMATION</span>
+    <h2 id="info-title"></h2>
+    <p class="dialog-copy" id="info-copy"></p>
+  </dialog>
+
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
+    <button class="dialog-close" type="button" aria-label="写真を閉じる">×</button>
+    <div id="lightbox-photo"></div>
+    <h2 id="lightbox-title"></h2>
+    <p id="lightbox-description"></p>
+  </dialog>
+
+  <dialog id="contact-dialog" aria-labelledby="contact-title">
+    <button class="dialog-close" type="button" aria-label="閉じる">×</button>
+    <span class="eyebrow">CONTACT / PREVIEW</span>
+    <h2 id="contact-title">どんなことを、つなぎたいですか。</h2>
+    <p class="small-note">
+      デモフォームです。送信・保存は行いません。
+      実際の個人情報や機密情報は入力しないでください。
+    </p>
+    <form class="contact-form" id="contact-form">
+      <label>
+        ご相談の種類
+        <select name="category" required>
+          <option value="">選択してください</option>
+          <option value="gear">Compass Gearについて</option>
+          <option value="development">システム開発について</option>
+          <option value="cloud">クラウド・運用について</option>
+          <option value="other">その他</option>
+        </select>
+      </label>
+      <label>
+        お名前（デモ用）
+        <input name="name" maxlength="80" required placeholder="例：テスト 太郎">
+      </label>
+      <label>
+        ご相談内容（デモ用）
+        <textarea name="message" rows="4" maxlength="2000" required></textarea>
+      </label>
+      <button class="form-submit" type="submit">入力を確認する（送信しません）</button>
+      <p class="form-status" id="form-status" role="status"></p>
+    </form>
+  </dialog>
+
+  <noscript>
+    <div class="shell section">
+      <p>
+        社員一覧、インタビュー、オフィスギャラリー、ページ切り替えにはJavaScriptを使用します。
+        ブラウザーのJavaScriptを有効にしてご覧ください。
+      </p>
+    </div>
+  </noscript>
+
+  <script>
+    /*
+      追加社員：
+      成瀬 梓（女性）／プロダクト・デザイン部／リードデザイナー
+      須藤 花音（女性）／プロダクト・デザイン部／UI・UXデザイナー
+      いずれも既存のノードリーフ社員名簿に含まれる人物。
+      人数を増員する設定ではなく、Web掲載人数を8名から10名に増やす。
+    */
+
+    const officeSpaces = [
+      {
+        key: "office-reception",
+        title: "エントランス・受付",
+        english: "WELCOME",
+        category: "relax",
+        description: "最初の会話が始まる場所。オークとグレーを基調に、落ち着いた明るさで迎えます。",
+        tone: "#dedbc9"
+      },
+      {
+        key: "office-workspace",
+        title: "メイン執務エリア",
+        english: "FOCUS",
+        category: "work",
+        description: "デスク島を配置したフリーアドレス空間。集中する仕事と、短い相談のどちらにも向き合える場所です。",
+        tone: "#d4ddc4"
+      },
+      {
+        key: "office-corridor",
+        title: "メイン通路",
+        english: "CONNECT",
+        category: "relax",
+        description: "ガラス越しに各エリアがつながる動線。行き来のしやすさと、見通しを大切にしています。",
+        tone: "#d6ddd8"
+      },
+      {
+        key: "office-executive",
+        title: "役員個室",
+        english: "OPEN MIND",
+        category: "management",
+        description: "一般執務エリアに面したガラス張りの個室。閉じこもりすぎず、必要な集中も確保します。",
+        tone: "#ddd2c4"
+      },
+      {
+        key: "office-collaboration",
+        title: "共同作業スペース",
+        english: "THINK TOGETHER",
+        category: "work",
+        description: "画面やホワイトボードを見ながら相談する場所。出社が重なる日は予備執務席として活用します。",
+        tone: "#e6d4b9"
+      },
+      {
+        key: "office-pantry",
+        title: "パントリー",
+        english: "TAKE A BREATH",
+        category: "relax",
+        description: "飲み物を用意して、少し気分を切り替える。仕事の合間に使うコンパクトな共用スペースです。",
+        tone: "#d8dfce"
+      },
+      {
+        key: "office-meeting10",
+        title: "10名会議室",
+        english: "BIG IDEAS",
+        category: "meeting",
+        description: "顧客との打ち合わせやプロジェクト会議に。オンライン参加者との対話も想定した会議室です。",
+        tone: "#d3d3da"
+      },
+      {
+        key: "office-meeting6",
+        title: "6名会議室",
+        english: "DISCUSS",
+        category: "meeting",
+        description: "チームの検討やレビューに使う中規模会議室。必要な資料を囲んで話を深めます。",
+        tone: "#d2d9cb"
+      },
+      {
+        key: "office-meeting4",
+        title: "4名会議室",
+        english: "SMALL TALK",
+        category: "meeting",
+        description: "少人数の相談や面談に。大きすぎない距離感で、落ち着いて話せる場所です。",
+        tone: "#e2d3ce"
+      },
+      {
+        key: "office-booth",
+        title: "Web会議用個室",
+        english: "ONE TO ONE",
+        category: "work",
+        description: "一人でオンライン会議に入るための個室。周囲への音と、集中しやすさに配慮します。",
+        tone: "#cdd8df"
+      },
+      {
+        key: "office-ceo",
+        title: "社長室・応接",
+        english: "NEXT CHAPTER",
+        category: "management",
+        description: "社長と秘書の執務、応接をまとめた部屋。機密性が必要な話にも配慮した構成です。",
+        tone: "#ded2be"
+      },
+      {
+        key: "office-locker",
+        title: "ロッカー・設備エリア",
+        english: "SUPPORT",
+        category: "management",
+        description: "個人収納や複合機を集約。執務席をすっきり使うための、実用的な裏方です。",
+        tone: "#d9dcd3"
+      }
+    ];
+
+    const people = [
+      {
+        id: "matsuoka",
+        name: "松岡 健介",
+        initials: "KM",
+        department: "システム開発部",
+        role: "副部長",
+        category: "development",
+        tone: "#d9dfc6",
+        title: "仕様の向こうにいる、使う人を見失わない。",
+        intro: "開発組織を支える松岡。目の前の依頼を形にすることと、本当に必要なものを考えること。その両方をどう大切にしているのか。",
+        answers: [
+          "業務システムは、完成した画面だけを見ても、うまくいっているか分かりません。誰が、いつ、どんな判断をするときに使うのか。まずそこを聞くようにしています。\n要望を整理するときも、「この機能が欲しい」の一歩手前にある仕事を確認したいですね。",
+          "相談を受けたときに、すぐ正解を渡しすぎないことです。どう考えたかを聞くと、自分にはなかった視点が見つかることがあります。\nもちろん、困っている人を放っておくという意味ではありません。一緒に判断するための材料をそろえる、という感覚です。",
+          "得意な技術を持っていることも大切ですが、分からないことをそのままにしない人と働きたいです。質問できることは、チームの強さにつながると思っています。"
+        ],
+        photos: ["office-workspace", "office-meeting10"],
+        schedule: [
+          ["10:00", "案件の進捗と相談事項を確認"],
+          ["11:00", "プロジェクトの設計・判断をレビュー"],
+          ["14:00", "顧客やチームとの打ち合わせ"],
+          ["16:00", "課題整理とメンバーの相談対応"]
+        ]
+      },
+      {
+        id: "ishikawa",
+        name: "石川 真由",
+        initials: "MI",
+        department: "システム開発部",
+        role: "開発1課長",
+        category: "development",
+        tone: "#efc9b5",
+        title: "相談が早いチームは、手戻りも減らせる。",
+        intro: "チームの進行と、日々の小さな相談。その両方に向き合う石川に、開発を前へ進めるための工夫を聞きました。",
+        answers: [
+          "進捗の数字だけでは見えないものがあります。「進んでいない」のか、「判断を待っている」のかで、必要な対応は違います。\n状況を責めるためではなく、詰まりを一緒にほどくために聞くようにしています。",
+          "相談するときに、きれいに説明できなくてもいい状態をつくりたいです。「ここが気になっています」という段階で共有できると、大きな手戻りになる前に考えられます。",
+          "自分の担当をやり切る意識と、周りの状況を見る余裕。その両方を大切にしたいです。最初から何でもできることより、一緒にやり方を調整できることを重視しています。"
+        ],
+        photos: ["office-collaboration", "office-meeting6"],
+        schedule: [
+          ["10:00", "チームの状況を確認"],
+          ["11:00", "仕様の整理と設計レビュー"],
+          ["14:00", "関係者との調整"],
+          ["16:30", "翌日の段取りと相談対応"]
+        ]
+      },
+      {
+        id: "morita",
+        name: "森田 美緒",
+        initials: "MM",
+        department: "システム開発部",
+        role: "テックリード",
+        category: "development",
+        tone: "#d4cae8",
+        title: "動く、の次に。変えやすい仕組みを。",
+        intro: "技術的な判断が、その後の運用や変更にどう影響するか。テックリードの森田が大切にする視点を紹介します。",
+        answers: [
+          "動くものをつくるのは出発点です。そのあとで変更が入ったとき、どこを直せばいいか分かるか。チームの別の人が読んでも理解できるか。そこまで考えたいです。",
+          "レビューでは、好みと理由を分けることを意識しています。こう書くべき、だけで終わらず、変更しやすさや安全性などの理由を共有したいですね。\n自分の提案がいつも正しいわけではないので、反対意見も聞きたいです。",
+          "技術を試す好奇心がありつつ、採用しない判断もできる人です。新しいから使うのではなく、今回の課題に合うかを一緒に考えられるとうれしいです。"
+        ],
+        photos: ["office-workspace", "office-booth"],
+        schedule: [
+          ["10:00", "設計上の論点とレビュー依頼を確認"],
+          ["11:00", "実装・検証"],
+          ["14:00", "コードレビューと技術相談"],
+          ["16:00", "検証結果の整理・共有"]
+        ]
+      },
+      {
+        id: "iwasaki",
+        name: "岩崎 修平",
+        initials: "SI",
+        department: "クラウドソリューション部",
+        role: "副部長",
+        category: "cloud",
+        tone: "#c8d8d3",
+        title: "何も起きない日を、ちゃんとつくる。",
+        intro: "安定して使えることを支えるクラウド部門。岩崎は、構築時点から運用の現実を考えることが大切だと話します。",
+        answers: [
+          "構築が完了しても、担当者が運用できなければ困ってしまいます。監視で何を見て、通知が来たら誰が判断するのか。日々の動きまで含めて設計します。",
+          "障害が起きないことだけでなく、起きたときに落ち着いて対応できることも重要です。手順や権限が整理されているかを、平時に確認しておきたいですね。",
+          "見えにくい仕事にも意味を見つけられる人と働きたいです。記録や確認を地道に続けることが、誰かの安心につながっています。"
+        ],
+        photos: ["office-workspace", "office-meeting6"],
+        schedule: [
+          ["10:00", "運用状況と対応事項を確認"],
+          ["11:00", "構成・監視設計の検討"],
+          ["14:00", "開発部門との調整"],
+          ["16:00", "手順と改善項目のレビュー"]
+        ]
+      },
+      {
+        id: "hayakawa",
+        name: "早川 玲奈",
+        initials: "RH",
+        department: "プロダクト・デザイン部",
+        role: "部長",
+        category: "product",
+        tone: "#e7d7ad",
+        title: "機能を増やす前に、迷いを減らしたい。",
+        intro: "プロダクトの価値は機能の数だけでは決まらない。早川が考える、使う人を中心にした製品づくりとは。",
+        answers: [
+          "何ができるかを増やす前に、何をすればいいか分かる状態にしたいです。便利な機能でも、見つからなかったり、設定が難しかったりすると価値が届きません。",
+          "企画、デザイン、開発を別々の工程として切り離さないことです。早い段階で相談すると、使いやすさと実装の現実を一緒に考えられます。",
+          "自分の案を大切にしながら、必要なら変えられる人です。案を通すことより、ユーザーにとってよい結果をつくることに向き合いたいです。"
+        ],
+        photos: ["office-collaboration", "office-meeting4"],
+        schedule: [
+          ["10:00", "利用者の声と課題を整理"],
+          ["11:00", "企画・デザインレビュー"],
+          ["14:00", "開発との仕様検討"],
+          ["16:30", "優先順位と次の検証を調整"]
+        ]
+      },
+      {
+        id: "miyazaki",
+        name: "宮崎 香織",
+        initials: "KM",
+        department: "営業・カスタマーサクセス部",
+        role: "カスタマーサクセスリーダー",
+        category: "sales",
+        tone: "#d6dfb8",
+        title: "導入しました、のあとから始まる仕事。",
+        intro: "製品やシステムが実際の仕事に根付くまで。宮崎は、顧客の言葉を社内へつなぐ役割を担います。",
+        answers: [
+          "導入したことと、使えていることは別です。何に困っていて、どこまでできるようになりたいのか。使い始めたあとも確認したいと思っています。",
+          "要望をそのまま開発へ渡さず、背景も一緒に伝えるようにしています。どの業務で、どのくらい困るのかが分かると、別の解決策が見つかることもあります。",
+          "相手に合わせて説明を変えられる人です。詳しく話すことより、相手が次に何をすればいいか分かることを大切にしたいですね。"
+        ],
+        photos: ["office-meeting6", "office-booth"],
+        schedule: [
+          ["10:00", "顧客からの相談内容を整理"],
+          ["11:00", "導入・活用の打ち合わせ"],
+          ["14:00", "社内の技術担当と相談"],
+          ["16:00", "支援内容と次の行動をまとめる"]
+        ]
+      },
+      {
+        id: "takase",
+        name: "高瀬 美咲",
+        initials: "MT",
+        department: "コーポレート部",
+        role: "課長兼社長秘書",
+        category: "corporate",
+        tone: "#e1d3c9",
+        title: "社長の予定だけでなく、会社の流れを見る。",
+        intro: "経営と現場のあいだで、仕事を円滑につなぐ。課長兼社長秘書の高瀬が考える、組織の支え方を聞きました。",
+        answers: [
+          "一つの予定変更でも、社内外のいろいろな人に影響します。目の前の調整を終えるだけでなく、誰に何を伝える必要があるかまで考えます。",
+          "情報を早く伝えることと、誰にでも伝えることは違います。機密性を守りつつ、必要な人が必要なタイミングで判断できる状態をつくりたいです。",
+          "気づいたことを言葉にできる人です。小さな違和感でも、共有してみると、会社全体のやり方を変えるきっかけになることがあります。"
+        ],
+        photos: ["office-ceo", "office-reception"],
+        schedule: [
+          ["09:30", "予定と社内連絡を確認"],
+          ["11:00", "会議・来客の調整"],
+          ["14:00", "管理業務と部門間の連携"],
+          ["16:00", "翌日以降の準備・確認"]
+        ]
+      },
+      {
+        id: "nishikawa",
+        name: "西川 真帆",
+        initials: "MN",
+        department: "コーポレート部",
+        role: "人事・採用担当",
+        category: "corporate",
+        tone: "#cbd7e1",
+        title: "いいところだけでは、入社後に困るから。",
+        intro: "採用は、入社して終わりではない。西川は、会社と候補者の認識をそろえることを大切にしています。",
+        answers: [
+          "魅力を伝えることと、期待を大きくしすぎることは違います。できていることだけでなく、まだ整えている途中のことも、できる範囲で説明したいです。",
+          "どちらかが一方的に選ぶ場にしないことです。仕事の進め方や期待する役割を具体的に話し、候補者の方にも判断材料を持って帰ってほしいと思っています。",
+          "自分が何を大切にしたいかを、言葉にしてくださるとうれしいです。会社に合わせた正解を探すより、一緒に働くときのイメージをすり合わせたいですね。"
+        ],
+        photos: ["office-meeting4", "office-reception"],
+        schedule: [
+          ["10:00", "採用状況と社内依頼を確認"],
+          ["11:00", "現場との役割・要件の整理"],
+          ["14:00", "面接・面談対応"],
+          ["16:30", "候補者への連絡と振り返り"]
+        ]
+      },
+      {
+        id: "naruse",
+        name: "成瀬 梓",
+        initials: "AN",
+        department: "プロダクト・デザイン部",
+        role: "リードデザイナー",
+        category: "product",
+        tone: "#e5c7b9",
+        title: "見た目の前に、迷う理由を見つける。",
+        intro: "リードデザイナーの成瀬。整った画面のさらに先にある、使う人の理解と行動を見つめます。",
+        answers: [
+          "画面がきれいでも、次に何をすればいいか分からなければ困ります。どこで迷うのか、何の言葉が伝わっていないのか。使う場面を具体的に想像するところから始めます。",
+          "デザインの理由を共有することです。好みの話で終わらせず、どんな課題を減らしたいのかを説明する。開発や顧客支援から違う視点をもらえると、案が強くなります。",
+          "完成した画面だけでなく、途中の考え方も見せられる人です。早めに相談し合えると、作り込む前に大切なことへ気づけると思っています。"
+        ],
+        photos: ["office-collaboration", "office-workspace"],
+        schedule: [
+          ["10:00", "デザイン課題とフィードバックを整理"],
+          ["11:00", "画面設計とプロトタイプ制作"],
+          ["14:00", "企画・開発とのレビュー"],
+          ["16:00", "デザイン仕様の整理と共有"]
+        ]
+      },
+      {
+        id: "sudo",
+        name: "須藤 花音",
+        initials: "KS",
+        department: "プロダクト・デザイン部",
+        role: "UI・UXデザイナー",
+        category: "product",
+        tone: "#d9d0eb",
+        title: "小さな違和感を、そのままにしない。",
+        intro: "日々の操作にある、小さな迷いや手間。UI・UXデザイナーの須藤は、その積み重なりに目を向けています。",
+        answers: [
+          "ボタンの名前や、入力したあとの案内など、小さなところでも使いやすさは変わります。慣れれば分かる、で終わらせず、初めて使う人の視点を持ちたいです。",
+          "分からないまま作り込まないことです。背景を聞いたり、簡単な案を見せたりすると、前提の違いに早く気づけます。質問することも、制作の一部だと思っています。",
+          "小さな改善を一緒に面白がれる人です。一見地味でも、毎日使う人には大きな違いになる。そういう変化を見つけていきたいですね。"
+        ],
+        photos: ["office-workspace", "office-collaboration"],
+        schedule: [
+          ["10:00", "レビュー内容と改善点を確認"],
+          ["11:00", "UI案と画面遷移を制作"],
+          ["14:00", "デザインレビュー"],
+          ["16:00", "修正と実装に向けた確認"]
+        ]
+      }
+    ];
+
+    const jobDefinitions = [
+      {
+        title: "Web・業務システムエンジニア",
+        department: "システム開発部",
+        mission: "顧客の業務を理解し、設計から継続改善まで関わる役割。",
+        tasks: ["業務システム・Webサービスの設計と実装", "コードレビュー、テスト、運用を踏まえた改善"],
+        strengths: ["Webアプリケーションの開発経験", "仕様の背景を確認し、チームで相談する姿勢"]
+      },
+      {
+        title: "クラウドエンジニア・SRE",
+        department: "クラウドソリューション部",
+        mission: "つくった基盤が、安心して使われ続ける状態を支える役割。",
+        tasks: ["クラウド基盤の構築と運用設計", "監視、権限、バックアップ、改善の仕組みづくり"],
+        strengths: ["クラウドまたはインフラ運用の経験", "障害対応と平時の改善を両方考える姿勢"]
+      },
+      {
+        title: "プロダクト・連携開発エンジニア",
+        department: "システム開発部・製品横断チーム",
+        mission: "Compass Gearを中心に、異なる仕組みを安全につなぐ役割。",
+        tasks: ["接続先の仕様調査とコネクター開発", "認証、権限、実行履歴などの設計"],
+        strengths: ["API連携やバックエンド開発の経験", "接続先の制約を確認し、安定性を考える姿勢"]
+      },
+      {
+        title: "UI・UXデザイナー",
+        department: "プロダクト・デザイン部",
+        mission: "使う人の迷いを減らし、製品の価値が届く体験をつくる役割。",
+        tasks: ["画面設計、プロトタイプ、デザイン仕様の作成", "企画・開発と連携した改善"],
+        strengths: ["UI制作や情報設計の経験", "デザインの理由を言葉にする力"]
+      },
+      {
+        title: "カスタマーサクセス",
+        department: "営業・カスタマーサクセス部",
+        mission: "導入して終わりにせず、日々の活用と改善につなぐ役割。",
+        tasks: ["導入支援、活用相談、顧客課題の整理", "社内の開発・製品部門との連携"],
+        strengths: ["法人顧客への支援・折衝経験", "相手に合わせて説明し、状況を整理する力"]
+      },
+      {
+        title: "専属SNS担当・採用広報",
+        department: "配属先は別途検討",
+        mission: "社長と現場の言葉から、この会社で働く魅力を伝える役割。",
+        tasks: ["Xの企画・投稿制作、社内取材、写真・動画制作", "採用広報、反応分析、公開前の確認"],
+        strengths: ["企業SNSまたは編集・制作の経験", "面白さと正確さ、社員の同意を両立する姿勢"]
+      }
+    ];
+
+    function createElement(tag, className, text) {
+      const element = document.createElement(tag);
+
+      if (className) {
+        element.className = className;
+      }
+
+      if (text !== undefined) {
+        element.textContent = text;
+      }
+
+      return element;
+    }
+
+    function getOffice(key) {
+      return officeSpaces.find((space) => space.key === key);
+    }
+
+    function createMedia(key, label, options = {}) {
+      const space = getOffice(key);
+      const media = createElement(
+        "div",
+        `media${options.portrait ? " portrait" : ""}`
+      );
+
+      media.style.setProperty("--tone", options.tone || space?.tone || "#d9dfcc");
+
+      const image = document.createElement("img");
+      image.src = `assets/${key}.jpg`;
+      image.alt = label;
+      image.loading = options.eager ? "eager" : "lazy";
+      image.decoding = "async";
+
+      const fallback = createElement("div", "image-fallback");
+      fallback.hidden = true;
+
+      const fallbackTitle = createElement(
+        "strong",
+        "",
+        options.initials || space?.english || "PHOTO"
+      );
+
+      fallback.append(
+        fallbackTitle,
+        createElement("small", "", label),
+        createElement("em", "", "IMAGE PLACEHOLDER / 画像未配置")
+      );
+
+      image.addEventListener("error", () => {
+        media.classList.add("is-missing");
+        fallback.hidden = false;
+      });
+
+      image.addEventListener("load", () => {
+        media.classList.remove("is-missing");
+        fallback.hidden = true;
+      });
+
+      media.append(image, fallback);
+
+      if (options.caption) {
+        media.append(createElement("span", "image-label", options.caption));
+      }
+
+      return media;
+    }
+
+    function hydratePhotos(root = document) {
+      root.querySelectorAll("[data-photo]").forEach((placeholder) => {
+        const key = placeholder.dataset.photo;
+        const label = placeholder.dataset.label || getOffice(key)?.title || "オフィス";
+        placeholder.replaceWith(
+          createMedia(key, label, {
+            caption: label
+          })
+        );
+      });
+    }
+
+    function memberCard(person) {
+      const card = createElement("a", "member-card");
+      card.href = `#interview/${person.id}`;
+      card.setAttribute("aria-label", `${person.name}のインタビューを読む`);
+
+      card.append(
+        createMedia(`people-${person.id}`, `${person.name}の架空人物ポートレート`, {
+          portrait: true,
+          initials: person.initials,
+          tone: person.tone
+        }),
+        createElement("span", "member-department", person.department),
+        createElement("span", "member-name", person.name),
+        createElement("span", "member-role", person.role),
+        createElement("span", "member-more", "INTERVIEW ↗")
+      );
+
+      return card;
+    }
+
+    function interviewCard(person) {
+      const card = createElement("a", "interview-card");
+      card.href = `#interview/${person.id}`;
+
+      card.append(
+        createMedia(`people-${person.id}`, `${person.name}の架空人物ポートレート`, {
+          portrait: true,
+          initials: person.initials,
+          tone: person.tone
+        }),
+        createElement("span", "eyebrow", "PEOPLE & STORIES"),
+        createElement("h2", "", person.title),
+        createElement("p", "interview-meta", `${person.department} / ${person.role}`),
+        createElement("strong", "", `${person.name} ↗`)
+      );
+
+      return card;
+    }
+
+    function renderMembers(category = "all") {
+      const selected = category === "all"
+        ? people
+        : people.filter((person) => person.category === category);
+
+      document.getElementById("people-grid").replaceChildren(
+        ...selected.map(memberCard)
+      );
+
+      document.getElementById("member-count").textContent =
+        `MEMBERS / ${selected.length}`;
+    }
+
+    document.querySelectorAll("[data-filter]").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll("[data-filter]").forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+
+        renderMembers(button.dataset.filter);
+      });
+    });
+
+    document.getElementById("interview-index").append(
+      ...people.map(interviewCard)
+    );
+
+    document.getElementById("recruit-interviews").append(
+      ...["morita", "naruse", "nishikawa"].map((id) => {
+        return interviewCard(people.find((person) => person.id === id));
+      })
+    );
+
+    function renderInterview(person) {
+      const container = document.getElementById("interview-content");
+      container.replaceChildren();
+
+      const header = createElement("header", "page-head shell");
+      const breadcrumb = createElement("nav", "breadcrumb");
+      breadcrumb.setAttribute("aria-label", "パンくず");
+
+      const homeLink = createElement("a", "", "HOME");
+      homeLink.href = "#home";
+
+      const interviewLink = createElement("a", "", "INTERVIEW");
+      interviewLink.href = "#interviews";
+
+      breadcrumb.append(
+        homeLink,
+        createElement("span", "", "/"),
+        interviewLink,
+        createElement("span", "", "/"),
+        createElement("span", "", person.name)
+      );
+
+      const hero = createElement("div", "interview-hero");
+      const copy = createElement("div");
+      copy.append(
+        createElement("span", "eyebrow", "People & stories"),
+        createElement("h1", "", person.title)
+      );
+
+      const profile = createElement("div", "interview-person");
+      profile.append(
+        createElement("span", "", `${person.department} / ${person.role}`),
+        createElement("strong", "", person.name)
+      );
+
+      copy.append(
+        profile,
+        createElement(
+          "p",
+          "small-note",
+          "架空の人物設定に基づく創作インタビューです。本人への実取材ではありません。"
+        )
+      );
+
+      hero.append(
+        copy,
+        createMedia(`people-${person.id}`, `${person.name}の架空人物ポートレート`, {
+          portrait: true,
+          eager: true,
+          initials: person.initials,
+          tone: person.tone
+        })
+      );
+
+      header.append(breadcrumb, hero);
+      container.append(header);
+
+      const article = createElement("article", "narrow");
+      article.append(createElement("p", "interview-intro", person.intro));
+
+      const questions = [
+        "いまの仕事で、大切にしていることは？",
+        "チームで働くとき、意識していることは？",
+        "どんな人と、一緒に働きたいですか？"
+      ];
+
+      person.answers.forEach((answer, index) => {
+        const block = createElement("section", "qa-block");
+        block.append(
+          createElement("span", "eyebrow", `QUESTION / 0${index + 1}`),
+          createElement("h2", "", questions[index]),
+          createElement("p", "", answer)
+        );
+        article.append(block);
+
+        if (index < person.photos.length) {
+          const space = getOffice(person.photos[index]);
+          const figure = createElement("figure", "interview-photo");
+          figure.append(
+            createMedia(space.key, space.title),
+            createElement(
+              "figcaption",
+              "",
+              `${space.title}。本人の撮影記録ではなく、働く環境を紹介するイメージです。`
+            )
+          );
+          article.append(figure);
+        }
+      });
+
+      const schedule = createElement("section", "schedule");
+      schedule.append(
+        createElement("span", "eyebrow", "One day / Example"),
+        createElement("h2", "", "ある一日の、仕事の流れ。")
+      );
+
+      person.schedule.forEach(([time, task]) => {
+        const row = createElement("div", "schedule-row");
+        row.append(
+          createElement("strong", "", time),
+          createElement("span", "", task)
+        );
+        schedule.append(row);
+      });
+
+      schedule.append(
+        createElement(
+          "p",
+          "small-note",
+          "業務内容に合わせた創作上の一例です。始終業時刻や固定の勤務日程を示すものではありません。"
+        )
+      );
+
+      article.append(schedule);
+      container.append(article);
+
+      const related = createElement("section", "section shell");
+      const heading = createElement("div", "section-heading");
+      heading.append(createElement("h2", "", "ほかの仲間の話も。"));
+
+      const relatedGrid = createElement("div", "interview-grid");
+      const index = people.indexOf(person);
+
+      for (let offset = 1; offset <= 3; offset += 1) {
+        relatedGrid.append(interviewCard(people[(index + offset) % people.length]));
+      }
+
+      const back = createElement("a", "text-link", "インタビュー一覧へ戻る ↗");
+      back.href = "#interviews";
+
+      related.append(heading, relatedGrid, back);
+      container.append(related);
+    }
+
+    let lastFocusedElement = null;
+
+    function openDialog(dialog) {
+      lastFocusedElement = document.activeElement;
+      dialog.showModal();
+      document.body.classList.add("modal-open");
+      dialog.querySelector(".dialog-close").focus();
+    }
+
+    function renderOffice(category = "all") {
+      const selected = category === "all"
+        ? officeSpaces
+        : officeSpaces.filter((space) => space.category === category);
+
+      const cards = selected.map((space) => {
+        const article = createElement("article", "office-card");
+        const button = createElement("button", "photo-button");
+        button.type = "button";
+        button.setAttribute("aria-label", `${space.title}の写真を拡大する`);
+        button.setAttribute("aria-haspopup", "dialog");
+        button.append(createMedia(space.key, space.title));
+
+        button.addEventListener("click", () => {
+          document.getElementById("lightbox-photo").replaceChildren(
+            createMedia(space.key, space.title, {
+              eager: true
+            })
+          );
+          document.getElementById("lightbox-title").textContent = space.title;
+          document.getElementById("lightbox-description").textContent = space.description;
+          openDialog(document.getElementById("lightbox"));
+        });
+
+        const caption = createElement("div", "office-caption");
+        const text = createElement("div");
+        text.append(
+          createElement("h3", "", space.title),
+          createElement("p", "", space.description)
+        );
+
+        const number = officeSpaces.indexOf(space) + 1;
+        caption.append(
+          text,
+          createElement("span", "office-number", `SPACE ${String(number).padStart(2, "0")}`)
+        );
+
+        article.append(button, caption);
+        return article;
+      });
+
+      document.getElementById("office-grid").replaceChildren(...cards);
+      document.getElementById("office-count").textContent = `SPACES / ${selected.length}`;
+    }
+
+    document.querySelectorAll("[data-office-filter]").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll("[data-office-filter]").forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+        renderOffice(button.dataset.officeFilter);
+      });
+    });
+
+    jobDefinitions.forEach((job) => {
+      const details = createElement("details", "job");
+      const summary = createElement("summary");
+      const summaryText = createElement("span");
+      summaryText.append(
+        createElement("strong", "", job.title),
+        createElement("small", "", `${job.department} / 募集構成例`)
+      );
+      summary.append(summaryText);
+
+      const body = createElement("div", "job-body");
+      const tasks = createElement("div");
+      const strengths = createElement("div");
+
+      tasks.append(
+        createElement("h4", "", "担うこと"),
+        createElement("p", "", job.mission)
+      );
+
+      const taskList = document.createElement("ul");
+      job.tasks.forEach((task) => {
+        taskList.append(createElement("li", "", task));
+      });
+      tasks.append(taskList);
+
+      strengths.append(createElement("h4", "", "経験・姿勢の例"));
+      const strengthList = document.createElement("ul");
+      job.strengths.forEach((strength) => {
+        strengthList.append(createElement("li", "", strength));
+      });
+      strengths.append(strengthList);
+
+      body.append(
+        tasks,
+        strengths,
+        createElement(
+          "div",
+          "job-note",
+          "創作上の募集構成例です。雇用形態・給与・休日・勤務地・選考条件は未設定のため、求人としての応募受付は行いません。"
+        )
+      );
+
+      details.append(summary, body);
+      document.getElementById("jobs").append(details);
+    });
+
+    const assetList = document.getElementById("asset-list");
+
+    [
+      ...officeSpaces.map((space) => ({
+        path: `assets/${space.key}.jpg`,
+        label: space.title
+      })),
+      ...people.map((person) => ({
+        path: `assets/people-${person.id}.jpg`,
+        label: person.name
+      }))
+    ].forEach((asset) => {
+      const item = document.createElement("li");
+      item.append(
+        createElement("code", "", asset.path),
+        document.createTextNode(` — ${asset.label}`)
+      );
+      assetList.append(item);
+    });
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navigation = document.getElementById("navigation");
+
+    function closeMenu() {
+      navigation.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.textContent = "MENU ＋";
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navigation.classList.toggle("is-open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "CLOSE −" : "MENU ＋";
+    });
+
+    navigation.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && navigation.classList.contains("is-open")) {
+        closeMenu();
+        menuToggle.focus();
+      }
+    });
+
+    document.querySelectorAll("dialog").forEach((dialog) => {
+      dialog.querySelector(".dialog-close").addEventListener("click", () => {
+        dialog.close();
+      });
+
+      dialog.addEventListener("click", (event) => {
+        const rect = dialog.getBoundingClientRect();
+        const outside =
+          event.clientX < rect.left ||
+          event.clientX > rect.right ||
+          event.clientY < rect.top ||
+          event.clientY > rect.bottom;
+
+        if (event.target === dialog && outside) {
+          dialog.close();
+        }
+      });
+
+      dialog.addEventListener("close", () => {
+        document.body.classList.remove("modal-open");
+
+        if (lastFocusedElement && document.contains(lastFocusedElement)) {
+          lastFocusedElement.focus();
+        }
+      });
+    });
+
+    const contactDialog = document.getElementById("contact-dialog");
+
+    document.getElementById("open-contact").addEventListener("click", () => {
+      openDialog(contactDialog);
+    });
+
+    document.getElementById("contact-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      document.getElementById("form-status").textContent =
+        "入力形式を確認しました。デモのため、送信・保存はしていません。";
+    });
+
+    contactDialog.addEventListener("close", () => {
+      document.getElementById("contact-form").reset();
+      document.getElementById("form-status").textContent = "";
+    });
+
+    document.getElementById("privacy-button").addEventListener("click", () => {
+      document.getElementById("info-title").textContent = "データの取り扱い";
+      document.getElementById("info-copy").textContent =
+        "このHTMLには、外部解析ツール、広告タグ、外部フォントを組み込んでいません。\n\nフォームの入力内容を外部へ送信せず、Cookieやローカルストレージにも保存しません。閉じると入力内容を消去します。\n\n画像は同じ公開先のassetsフォルダーから読み込みます。公開先サーバーのアクセスログなどは別途確認が必要です。\n\n本番公開時には、実際の利用サービスと運用に合ったプライバシーポリシーを整備してください。";
+      openDialog(document.getElementById("info-dialog"));
+    });
+
+    const motionButton = document.querySelector(".motion-toggle");
+
+    motionButton.addEventListener("click", () => {
+      const paused = document.body.classList.toggle("motion-paused");
+      motionButton.setAttribute("aria-pressed", String(paused));
+      motionButton.textContent = paused
+        ? "自動アニメーションを再開"
+        : "自動アニメーションを停止";
+    });
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let revealObserver = null;
+
+    if ("IntersectionObserver" in window && !reducedMotion.matches) {
+      revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove("pending");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.05
+      });
+    }
+
+    function observePage(page) {
+      if (!revealObserver) {
+        return;
+      }
+
+      page.querySelectorAll(".reveal:not([data-observed])").forEach((element) => {
+        element.dataset.observed = "true";
+        element.classList.add("pending");
+        revealObserver.observe(element);
+      });
+    }
+
+    const titles = {
+      home: "CompassONE｜つながらない、その先へ。",
+      recruit: "採用情報｜CompassONE",
+      interviews: "社員インタビュー｜CompassONE",
+      office: "オフィス紹介｜CompassONE"
+    };
+
+    let currentPage = "";
+    let currentPerson = "";
+
+    function route(initial = false) {
+      const hash = location.hash.slice(1) || "home";
+      const parts = hash.split("/");
+      let pageName = parts[0];
+      const detail = parts[1] || "";
+      let person = null;
+
+      if (!["home", "recruit", "interviews", "interview", "office"].includes(pageName)) {
+        pageName = "home";
+      }
+
+      if (pageName === "interview") {
+        person = people.find((member) => member.id === detail);
+
+        if (!person) {
+          pageName = "interviews";
+        }
+      }
+
+      const pageChanged =
+        pageName !== currentPage ||
+        (pageName === "interview" && detail !== currentPerson);
+
+      if (pageName === "interview" && pageChanged) {
+        renderInterview(person);
+        currentPerson = detail;
+      }
+
+      document.querySelectorAll(".page").forEach((page) => {
+        page.hidden = page.dataset.page !== pageName;
+      });
+
+      document.querySelectorAll("[data-nav-page]").forEach((link) => {
+        const activePage = pageName === "interview" ? "interviews" : pageName;
+
+        if (link.dataset.navPage === activePage) {
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+
+      document.title = pageName === "interview"
+        ? `${person.name}のインタビュー｜CompassONE`
+        : titles[pageName];
+
+      currentPage = pageName;
+      const activePage = document.querySelector(`[data-page="${pageName}"]`);
+      observePage(activePage);
+      closeMenu();
+
+      requestAnimationFrame(() => {
+        let target = null;
+
+        if (pageName !== "interview" && detail) {
+          target = document.getElementById(detail);
+        }
+
+        if (target) {
+          target.scrollIntoView({
+            behavior: initial || reducedMotion.matches ? "auto" : "smooth",
+            block: "start"
+          });
+
+          if (detail === "main") {
+            document.getElementById("main").focus({
+              preventScroll: true
+            });
+          }
+        } else if (pageChanged || initial) {
+          window.scrollTo({
+            top: 0,
+            behavior: "instant"
+          });
+
+          if (!initial) {
+            const heading = activePage.querySelector("h1");
+
+            if (heading) {
+              heading.setAttribute("tabindex", "-1");
+              heading.focus({
+                preventScroll: true
+              });
+            }
+          }
+        }
+      });
+    }
+
+    hydratePhotos();
+    renderMembers();
+    renderOffice();
+
+    window.addEventListener("hashchange", () => {
+      route(false);
+    });
+
+    route(true);
+  </script>
+</body>
+</html>
