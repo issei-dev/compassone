@@ -37,7 +37,7 @@
    * 12月へ進めるときは、例えば
    * 2026-12-01 に変更する。
    */
-  const STORY_DATE = "2026-11-24";
+  const STORY_DATE = "2026-11-30";
   const TRANSFER_DATE = "2026-12-01";
   const transferred = STORY_DATE >= TRANSFER_DATE;
 
